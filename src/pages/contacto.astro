@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Chipa'l Mate - Contacto">
+  <main class="flex flex-col gap-14 w-[800px] m-14">
+    <header class="flex flex-col gap-8">
+      <h2 class="text-3xl font-bold font-mono">
+        Puedes contactarnos por Whatsapp o instagram
+      </h2>
+      <div class="flex flex-col gap-5 font-semibol text-lg">
+        <p class="font-mono text-xl">
+          Whatsapp: <span
+            class="font-extrabold font-mono border border-orange-400 rounded-xl p-2"
+            ><a
+              href="https://wa.me/+543855852437"
+              target="_blank"
+              rel="noreferrer">Chipa'l mate</a
+            ></span
+          >
+        </p>
+        <p class="font-mono text-xl">
+          Instagram: <span class="font-extrabold font-mono">
+            <a
+              href="https://www.instagram.com/santiagoemanuel.jsx/"
+              target="_blank"
+              rel="noreferrer">SantiagoEmanuel.jsx</a
+            >
+          </span>
+        </p>
+      </div>
+    </header>
+    <section class="flex justify-center">
+      <form class="flex flex-col w-[500px] gap-4">
+        <div>
+          <div class="w-full flex flex-col">
+            <label class="text-sm font-semibold" for="fullname"
+              >Nombre y apellido</label
+            >
+            <input
+              class="rounded-xl p-3 font-bold text-lg"
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Santiago Mustafá"
+            />
+          </div>
+          <div class="flex flex-col w-full">
+            <label class="text-sm font-semibold" for="email">Email</label>
+            <input
+              class="rounded-xl p-3 font-bold text-lg"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ejemplo@ejemplo.com"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col w-full">
+          <label class="text-sm font-semibold" for="message">Mensaje</label>
+          <textarea
+            class="rounded-xl p-3 font-bold text-lg"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Cuéntanos, en qué podemos ayudarte?"></textarea>
+        </div>
+      </form>
+    </section>
+  </main>
+</Layout>

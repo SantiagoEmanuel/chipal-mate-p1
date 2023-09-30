@@ -1,0 +1,123 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/jpg" href="/logo.jpg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-around w-full pb-3 pt-5 bg-[#252422] text-white"
+    >
+      <h1
+        class="text-4xl font-bold text-center flex items-center gap-6 text-[#FF9900]"
+      >
+        Chipa'l Mate <img
+          src="/logo.jpg"
+          alt="Logo de chipa'l mate"
+          class="rounded-full w-20"
+        />
+      </h1>
+      <nav>
+        <ul class="flex gap-6">
+          <li class="">
+            <a
+              class="p-2 rounded-xl border-[2px] border-[#f3ab3f] hover:bg-[#FF9900] font-bold text-mono text-[#FF9900] hover:text-black h-full w-full"
+              href="/">Productos</a
+            >
+          </li>
+          <li>
+            <a
+              class="p-2 rounded-xl border-[2px] border-[#f3ab3f] hover:bg-[#FF9900] font-bold text-mono text-[#FF9900] hover:text-black h-full w-full"
+              href="/contacto">Contáctanos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <footer class="w-full flex flex-col gap-5 p-4 bg-[#252422] text-white">
+      <div class="flex flex-col gap-3 w-full">
+        <header>
+          <h4 class="text-mono font-bold text-lg">Redes sociales</h4>
+        </header>
+        <main>
+          <ul class="flex gap-4 font-bold">
+            <li class="flex gap-1 items-center cursor-pointer">
+              <img
+                src="/instagram-icon.svg"
+                alt="instagram red social icon"
+                class="w-8"
+              />Instagram
+            </li>
+            <li class="flex gap-1 items-center cursor-pointer">
+              <img
+                src="/twitter-icon.svg"
+                alt="twitter x red social icon"
+                class="w-8"
+              />Twitter
+            </li>
+            <li class="flex gap-1 items-center cursor-pointer">
+              <img
+                src="/threads-icon.svg"
+                alt="threads res social icon"
+                class="w-8"
+              />Threads
+            </li>
+          </ul>
+        </main>
+      </div>
+      <p class="text-lg opacity-60 font-bold text-center">
+        Copiright 2023 - todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #ccc5b9;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>

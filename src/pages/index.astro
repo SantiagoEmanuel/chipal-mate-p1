@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/product.astro";
+import About from "../components/about.astro";
+---
+
+<Layout title="Chipa'l Mate">
+  <main class="w-[900px] flex flex-col gap-20 relative justify-center p-5">
+    <h2
+      class="text-center text-4xl font-bold font-mono text-black"
+      id="productos"
+    >
+      Productos
+    </h2>
+    <section class="flex items-center justify-center gap-[105px]">
+      <Product>
+        <img
+          src="/chipa.webp"
+          alt="Portada del artículo"
+          slot="img"
+          class="card-img-top"
+        />
+        <h4 slot="product" class="card-title">Chipa</h4>
+        <p slot="description" class="card-text">
+          El chipa es un bocado tradicional con una textura crujiente por fuera
+          y suave por dentro. Es una deliciosa opción libre de gluten que
+          combina a la perfección el sabor y la tradición.
+        </p>
+        <a href="/chipa" slot="productUrl" class="btn btn-primary"
+          >Ir al producto</a
+        >
+      </Product>
+      <Product>
+        <img
+          src="/medialuna.webp"
+          alt="Portada del artículo"
+          slot="img"
+          class="card-img-top"
+        />
+        <h4 slot="product" class="card-title">Medialuna</h4>
+        <p slot="description" class="card-text">
+          Las medialunas son dulces y esponjosos croissants, ideales para
+          disfrutar en el desayuno o la merienda, irresistibles para acompañar
+          con mate, café o té.
+        </p>
+        <a href="/medialuna" slot="productUrl" class="btn btn-primary"
+          >Ir al producto</a
+        >
+      </Product>
+    </section>
+    <section class="flex flex-col items-center justify-center gap-[105px]">
+      <About />
+    </section>
+  </main>
+</Layout>

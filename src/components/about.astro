@@ -1,0 +1,81 @@
+<a
+  href="#bio"
+  class="border-[3px] border-gray-500 rounded-lg p-3 text-gray-500 hover:bg-orange-400 hover:border-orange-400 hover:text-black transition-all font-bold"
+  id="saber-mas"
+>
+  Quieres saber sobre Chipa'l Mate?
+</a>
+<div id="bio" class="hidden p-4 h-screen">
+  <p class="text-4xl text-center font-bold text-black">
+    ¡Bienvenidos a Chipa'l Mate!
+  </p>
+  <p class="text-xl font-bold font-mono text-[#333]">
+    Deléitate con nuestros deliciosos productos freezados, perfectos para
+    satisfacer tus antojos en cualquier momento. En Chipa'l Mate, nos
+    enorgullece ofrecerte una experiencia gastronómica única y libre de gluten,
+    con una selección de productos irresistibles que harán que tu paladar se
+    sienta feliz.
+  </p>
+  <p class="text-xl font-bold font-mono text-[#333]">
+    Chipas: Nuestro Tesoro Escondido <br />
+     Descubre el auténtico sabor de nuestras chipas, el producto estrella de
+    Chipa'l Mate. Cada bocado es una explosión de sabor y tradición, elaborado
+    con ingredientes de alta calidad y libre de TACC. Nuestras chipas son la
+    elección perfecta para acompañar tus momentos especiales o simplemente
+    disfrutar de un snack saludable y delicioso.
+  </p>
+  <p class="text-xl font-bold font-mono text-[#333]">
+    Medialunas y Pan Además de nuestras chipas, también te ofrecemos exquisitas
+    medialunas y pan fresco, ambos libres de gluten. Nuestros maestros panaderos
+    trabajan con pasión para asegurarte productos de calidad que se derriten en
+    tu boca y te hacen olvidar que son SIN TACC.
+  </p>
+  <p class="text-xl font-bold font-mono text-[#333]">
+    En Chipa'l Mate, nos comprometemos a brindarte opciones deliciosas y seguras
+    para todos, sin importar tus restricciones dietéticas. Cada uno de nuestros
+    productos es elaborado con cariño y cuidado, para que puedas disfrutar de la
+    gastronomía sin preocupaciones.
+  </p>
+  <p class="text-xl font-bold font-mono text-[#333]">
+    ¡Gracias por visitarnos y ser parte de la familia Chipa'l Mate!
+  </p>
+</div>
+
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let show = false;
+    const showBio = document
+      .getElementById("saber-mas")
+      .addEventListener("click", () => showAllBio());
+    function showAllBio() {
+      if (!show) {
+        const bio = document.getElementById("bio");
+        const ancord = document.getElementById("saber-mas");
+        bio.className =
+          "animate__animated animate__bounceIn flex flex-col gap-[40px]";
+        setTimeout(function () {
+          ancord.href = "#productos";
+        }, 200);
+        show = true;
+      } else {
+        const bio = document.getElementById("bio");
+        const ancord = document.getElementById("saber-mas");
+        bio.className = "animate__animated animate__bounceOut";
+        setTimeout(function () {
+          bio.className = "hidden";
+          ancord.href = "#bio";
+        }, 750);
+        show = false;
+      }
+    }
+  });
+</script>
+
+<style></style>
